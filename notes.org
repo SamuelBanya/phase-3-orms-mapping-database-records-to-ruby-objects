@@ -1,0 +1,21 @@
+These are the commands I used with the 'pry' breakpoint:
+#+begin_src sql
+[1] pry(main)> Song.all
+=> [#<Song:0x00007f99ebb265b0 @album="25", @id=1, @name="Hello">,
+ #<Song:0x00007f99ebb26560 @album="The Black Album", @id=2, @name="99 Problems">]
+
+[2] pry(main)> Song.all.first
+=> #<Song:0x00007f99ebb4dae8 @album="25", @id=1, @name="Hello">
+
+[3] pry(main)> Song.all.last
+=> #<Song:0x00007f99ef89a7c0 @album="The Black Album", @id=2, @name="99 Problems">
+
+[4] pry(main)> Song.all.last.name
+=> "99 Problems"
+
+[5] pry(main)> Song.all.last.name.reverse
+=> "smelborP 99"
+
+[1] pry(main)> Song.find_by_name("Hello")
+=> #<Song:0x00007fee76234198 @album="25", @id=1, @name="Hello">
+#+end_src
